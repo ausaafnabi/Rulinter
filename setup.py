@@ -8,11 +8,12 @@ setup(
     author='AusaafNabi',
     author_email='no-reply@example.com',
     url='https://github.com/ausaafnabi/Rulinter',
-    py_modules=['_russian_comments_checker'],
+    py_modules=['_russian_comments_checker','_line_endings'],
     install_requires=requires,
     entry_points={
         'flake8.extension': [
             'RU001 = _russian_comments_checker:RussianCommentsChecker',
+            'LE = _line_endings:LineEndingsChecker',
         ],
     },
 )
